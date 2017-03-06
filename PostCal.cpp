@@ -427,7 +427,7 @@ double PostCal::computeTotalLikelihood(double * stat, double NCP,map<int,double>
                 prior_x=1;
                 #pragma omp critical
                  {
-                    for(long int zeng = 0; zeng < snpCount; zeng++)
+                    for(long int z_test = 0; z_test < snpCount; z_test++)
          {
            double test_x=1;
         //   map<int,double>::iterator l_it;
@@ -439,7 +439,7 @@ double PostCal::computeTotalLikelihood(double * stat, double NCP,map<int,double>
         //      test_x=l_it->second;
         //    }
         //   test_x=l_it->second;
-           if(confi[tid][zeng]==1)
+           if(confi[tid][z_test]==1)
             {
               test_x=0.01;
             } else
