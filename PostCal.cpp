@@ -394,7 +394,7 @@ double PostCal::computeTotalLikelihood(double * stat, double NCP,map<int,double>
                 init_start = init_start + str[idx] + 1;
               }
         //     cout<<endl;
-             for (int x = init_start + 1; x<num; x++)
+             for (int x = init_start ; x<num; x++)
               {
                 confi[tid][x] = 0;
               }
